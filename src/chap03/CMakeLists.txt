@@ -133,7 +133,7 @@ include_directories(
 # # With catkin_make all packages are built within a single CMake context
 # # The recommended prefix ensures that target names across packages don't collide
 add_executable(helloPub src/helloPub.cpp)
-
+add_executable(helloSub src/helloSub.cpp)
 # # Rename C++ executable without prefix
 # # The above recommended prefix causes long target names, the following renames the
 # # target back to the shorter version for ease of user use
@@ -149,7 +149,13 @@ target_link_libraries(helloPub
   ${catkin_LIBRARIES}
 )
 
+target_link_libraries(helloSub
+  ${catkin_LIBRARIES}
+)
+
 add_dependencies(helloPub ${PROJECT_NAME}_generate_messages_cpp)
+dd_dependencies(helloSub ${PROJECT_NAME}_generate_messages_cpp)
+
 
 
 # ############
