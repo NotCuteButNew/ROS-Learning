@@ -14,9 +14,9 @@ int main(int argc, char **argv) {
   std::stringstream ss;
   int count = 0;
   while (ros::ok()) {
-    ss<<"hello world !"<<count;
+    ss << "hello world !" << count;
     msg.data = ss.str();
-    ROS_INFO("i am helloPub, can u here me ?");
+    ROS_INFO("helloPub: %s", msg.data.c_str());
     chatter_pub.publish(msg);
     ros::spinOnce();
     loop_rate.sleep();
