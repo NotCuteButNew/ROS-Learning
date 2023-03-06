@@ -154,7 +154,7 @@ target_link_libraries(helloSub
 )
 
 add_dependencies(helloPub ${PROJECT_NAME}_generate_messages_cpp)
-dd_dependencies(helloSub ${PROJECT_NAME}_generate_messages_cpp)
+add_dependencies(helloSub ${PROJECT_NAME}_generate_messages_cpp)
 
 
 
