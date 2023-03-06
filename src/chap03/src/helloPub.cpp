@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
   while (ros::ok()) {
     ss << "hello world !" << count;
     msg.data = ss.str();
-    ROS_INFO("helloPub: %s", msg.data.c_str());
+    ROS_INFO("helloPub: %s\n", msg.data.c_str());
     chatter_pub.publish(msg);
     ros::spinOnce();
     loop_rate.sleep();
