@@ -152,6 +152,12 @@ target_link_libraries(personPub
 )
 add_dependencies(personPub ${PROJECT_NAME}_generate_messages_cpp)
 
+
+add_executable(personSub src/personSub.cpp)
+target_link_libraries(personSub 
+  ${catkin_LIBRARIES}
+)
+add_dependencies(personSub ${PROJECT_NAME}_generate_messages_cpp)
 # # Rename C++ executable without prefix
 # # The above recommended prefix causes long target names, the following renames the
 # # target back to the shorter version for ease of user use
