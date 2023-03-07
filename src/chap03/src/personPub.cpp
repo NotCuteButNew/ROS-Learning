@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
     police.publish(person_msg);
     ROS_INFO("Arrest this person: name:%s\tsex:%d\tage:%d",person_msg.name.c_str(),person_msg.sex,person_msg.age);
     loop_rate.sleep();
-    ros::spin();
+    ros::spinOnce();
   }
   return 0;
 }
